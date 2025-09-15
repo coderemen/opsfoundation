@@ -10,10 +10,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">OpsFoundry</h3>
-            <p className="text-background/70 mb-6 max-w-md">
-              The Internal Developer Platform for non-technical teams. Transform your workflows with 
-              pre-built automation recipes.
-            </p>
+          <p className="text-background/70 text-sm">
+            We're currently in concept validation phase, exploring if there's demand for this type of automation platform for non-technical teams.
+          </p>
             <div className="space-y-2 text-sm text-background/60">
               <p>Perfect for 10-50 person companies</p>
               <p>Built for marketing, analytics, and ops teams</p>
@@ -61,8 +60,11 @@ const Footer = () => {
         
         {/* Additional Info */}
         <div className="mt-8 pt-8 border-t border-background/20 text-center">
+          <p className="text-background/60 text-sm mb-2">
+            🚀 <strong>This is a concept validation project.</strong> We're exploring if teams need this type of automation platform.
+          </p>
           <p className="text-background/60 text-sm">
-            Built with ❤️ for operations teams who want developer-quality automation without the complexity.
+            Questions or feedback? Email us at <span className="font-medium">coderemen@gmail.com</span>
           </p>
         </div>
       </div>

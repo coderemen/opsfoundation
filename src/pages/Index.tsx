@@ -5,6 +5,7 @@ import Features from "@/components/sections/Features";
 import UseCases from "@/components/sections/UseCases";
 import SocialProof from "@/components/sections/SocialProof";
 import Pricing from "@/components/sections/Pricing";
+import ContactForm from "@/components/sections/ContactForm";
 import EmailCapture from "@/components/sections/EmailCapture";
 import Footer from "@/components/sections/Footer";
 import { Helmet } from "react-helmet-async";
@@ -33,11 +34,11 @@ const Index = () => {
             "operatingSystem": "Web",
             "offers": {
               "@type": "Offer",
-              "price": "29",
+              "price": "10",
               "priceCurrency": "USD",
               "priceSpecification": {
                 "@type": "UnitPriceSpecification",
-                "price": "29",
+                "price": "10",
                 "priceCurrency": "USD",
                 "unitCode": "MON"
               }
@@ -72,6 +73,10 @@ const Index = () => {
           
           <section id="pricing">
             <Pricing />
+          </section>
+          
+          <section id="contact">
+            <ContactForm />
           </section>
           
           <section id="early-access">

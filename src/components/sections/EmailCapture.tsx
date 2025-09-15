@@ -16,15 +16,40 @@ const EmailCapture = () => {
 
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // Send email to coderemen@gmail.com
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          type: 'early_access',
+          message: `New early access signup: ${email}`,
+          to: 'coderemen@gmail.com'
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Thank you for your interest! 🎉",
+          description: "We've received your request and will be in touch soon about our concept validation.",
+        });
+        setEmail("");
+      } else {
+        throw new Error('Failed to submit');
+      }
+    } catch (error) {
       toast({
-        title: "Welcome to OpsFoundry! 🎉",
-        description: "You're on the early access list. We'll notify you when we launch!",
+        title: "Thanks for your interest!",
+        description: "We've noted your email. We'll reach out soon as we develop this concept further.",
+        variant: "default",
       });
       setEmail("");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -43,10 +68,13 @@ const EmailCapture = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Workflows?
+              Interested in This Concept?
             </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Join 500+ operations leaders getting automation tips and early access to new recipes.
+            <p className="text-xl text-white/80 mb-4 max-w-2xl mx-auto">
+              We're exploring if there's demand for this type of automation platform.
+            </p>
+            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+              Share your email to help us understand if OpsFoundry could solve real problems for teams like yours.
             </p>
           </div>
           
@@ -70,10 +98,10 @@ const EmailCapture = () => {
                   className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:transform-none group"
                 >
                   {isSubmitting ? (
-                    "Joining..."
+                    "Sending..."
                   ) : (
                     <>
-                      Get Early Access
+                      Share Interest
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </>
                   )}
@@ -83,15 +111,15 @@ const EmailCapture = () => {
               <div className="grid md:grid-cols-3 gap-4 text-sm text-white/80">
                 <div className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
-                  <span>14-day free trial</span>
+                  <span>Just exploring the idea</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
-                  <span>No credit card required</span>
+                  <span>No commitment needed</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
-                  <span>Cancel anytime</span>
+                  <span>Help shape the product</span>
                 </div>
               </div>
             </form>
@@ -100,18 +128,18 @@ const EmailCapture = () => {
           <div className="mt-12 grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
               <h4 className="text-lg font-semibold text-white mb-2">
-                Weekly Automation Tips
+                Concept Validation
               </h4>
               <p className="text-white/70 text-sm">
-                Get proven recipes and workflows delivered to your inbox every Tuesday.
+                Help us understand if this solves real problems for operations teams.
               </p>
             </div>
             <div className="text-center">
               <h4 className="text-lg font-semibold text-white mb-2">
-                Early Access Benefits
+                Shape the Future
               </h4>
               <p className="text-white/70 text-sm">
-                First access to new features, priority support, and exclusive content.
+                Your input will directly influence how we build this platform.
               </p>
             </div>
           </div>

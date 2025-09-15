@@ -28,22 +28,28 @@ const Hero = () => {
             
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <Button className="btn-hero group">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="secondary" className="btn-secondary group">
-                <Play className="mr-2 h-5 w-5" />
-                Book Demo
-              </Button>
+            <Button className="btn-hero group">
+              Share Your Interest
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <Button variant="secondary" className="btn-secondary group">
+              <Play className="mr-2 h-5 w-5" />
+              Learn More
+            </Button>
             </div>
             
             {/* Value Proposition */}
             <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <p className="text-lg font-medium text-foreground">
+              <p className="text-lg font-medium text-foreground mb-4">
                 "Stop copy-pasting between tools. Start automating like developers do - 
                 <span className="text-primary font-semibold"> but built for marketing, analytics, and ops teams."</span>
               </p>
+              <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                <span className="inline-flex items-center px-2 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium">
+                  💡 Concept Phase
+                </span>
+                <span>We're validating this idea with potential users</span>
+              </div>
             </div>
           </div>
           

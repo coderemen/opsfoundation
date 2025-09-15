@@ -57,7 +57,7 @@ const Navigation = () => {
               Sign In
             </Button>
             <Button className="btn-accent group">
-              Start Free Trial
+              Share Interest
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
@@ -90,7 +90,7 @@ const Navigation = () => {
                   Sign In
                 </Button>
                 <Button className="btn-accent w-full group">
-                  Start Free Trial
+                  Share Interest
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </div>

@@ -87,13 +87,13 @@ const UseCases = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold mb-4">
-            Perfect for <span className="text-primary">10-50 person companies</span> ready to scale operations
+            Does this sound like your team?
           </h3>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join growing teams who use OpsFoundry to build developer-quality automation without hiring developers.
+            We're building OpsFoundry based on real problems faced by 10-50 person companies. Help us understand if we're on the right track.
           </p>
           <button className="btn-hero">
-            Explore All Use Cases
+            Share Your Experience
           </button>
         </div>
       </div>

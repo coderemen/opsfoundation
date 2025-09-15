@@ -69,14 +69,16 @@ const Features = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 max-w-4xl mx-auto border border-primary/20">
-            <h3 className="text-2xl font-bold mb-4">Ready to transform your workflows?</h3>
-            <p className="text-muted-foreground mb-6">
-              Join teams who've recovered 15+ hours per week with OpsFoundry automation recipes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-hero">Start Your Free Trial</button>
-              <button className="btn-secondary">View All Features</button>
-            </div>
+          <h3 className="text-2xl font-bold mb-4">
+            Interested in helping us validate this concept?
+          </h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            We're exploring if teams like yours would benefit from this type of automation platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="btn-hero">Share Your Interest</button>
+            <button className="btn-secondary">Tell Us Your Pain Points</button>
+          </div>
           </div>
         </div>
       </div>

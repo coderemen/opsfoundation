@@ -8,11 +8,18 @@ const Pricing = () => {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent rounded-full px-4 py-2 mb-4">
+            <span className="text-sm font-medium">💡 Concept Validation</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Simple, <span className="text-gradient">Transparent Pricing</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
             Start automating your workflows today. No hidden fees, no complicated tiers.
+          </p>
+          <p className="text-sm text-muted-foreground max-w-xl mx-auto bg-muted/50 rounded-lg p-3">
+            <strong>Note:</strong> We're currently validating this concept with potential users. 
+            The product is in early development - pricing shown is our target for launch.
           </p>
         </div>
         
@@ -31,7 +38,7 @@ const Pricing = () => {
                 <div>
                   <h3 className="text-3xl font-bold mb-2">OpsFoundry Pro</h3>
                   <div className="flex items-baseline mb-4">
-                    <span className="text-5xl font-bold text-primary">$29</span>
+                    <span className="text-5xl font-bold text-primary">$10</span>
                     <span className="text-xl text-muted-foreground ml-2">/user/month</span>
                   </div>
                   <p className="text-muted-foreground mb-6">
@@ -57,13 +64,13 @@ const Pricing = () => {
                   </div>
                   
                   <div className="flex flex-col space-y-3">
-                    <Button className="btn-hero w-full group">
-                      Start Free 14-Day Trial
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                    <p className="text-xs text-muted-foreground text-center">
-                      No credit card required • Cancel anytime
-                    </p>
+            <Button className="btn-hero w-full group">
+              Express Interest
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <p className="text-xs text-muted-foreground text-center">
+              Help us validate this concept • No commitment required
+            </p>
                   </div>
                 </div>
                 
@@ -78,11 +85,11 @@ const Pricing = () => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Cost per hour saved:</span>
-                        <span className="font-medium">~$2</span>
+                        <span className="font-medium">~$0.67</span>
                       </div>
                       <div className="border-t border-success/20 pt-2 flex justify-between">
                         <span className="font-semibold text-success">Monthly savings:</span>
-                        <span className="font-bold text-success">$1,500+</span>
+                        <span className="font-bold text-success">$1,000+</span>
                       </div>
                     </div>
                   </div>
@@ -106,12 +113,12 @@ const Pricing = () => {
                   </div>
                   
                   <div className="text-center">
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Questions about pricing?
-                    </p>
-                    <Button variant="link" className="text-primary p-0 h-auto">
-                      Book a demo call →
-                    </Button>
+            <p className="text-sm text-muted-foreground mb-2">
+              Interested in this concept?
+            </p>
+            <Button variant="link" className="text-primary p-0 h-auto">
+              Share your thoughts →
+            </Button>
                   </div>
                 </div>
               </div>
