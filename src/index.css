@@ -2,66 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* OpsFoundry Design System - Modern B2B SaaS Landing Page
-All colors MUST be HSL.
+/* OpsFoundry Premium Automation Recipe Platform Design System
+All colors MUST be HSL. Premium dark-focused design.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 215 28% 17%;
+    /* Core Brand Colors - Premium Dark Theme */
+    --background: 220 13% 9%;
+    --foreground: 220 9% 93%;
 
     /* Cards & Surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card: 220 13% 11%;
+    --card-foreground: 220 9% 93%;
 
     /* Popover & Overlays */
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 9% 93%;
 
-    /* Primary Brand - Deep Tech Blue */
-    --primary: 217 91% 60%;
+    /* Primary Brand - Premium Electric Blue */
+    --primary: 213 88% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 217 100% 50%;
+    --primary-dark: 213 98% 55%;
+    --primary-light: 213 88% 70%;
 
-    /* Secondary - Light Blue Gray */
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 215 25% 27%;
+    /* Secondary - Warm Premium Gray */
+    --secondary: 220 9% 20%;
+    --secondary-foreground: 220 9% 85%;
 
     /* Muted Elements */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 13% 13%;
+    --muted-foreground: 220 9% 60%;
 
-    /* Accent - Vibrant Purple */
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Premium Gold */
+    --accent: 45 93% 65%;
+    --accent-foreground: 220 13% 9%;
 
-    /* Status Colors */
+    /* Recipe Status Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --success: 142 76% 36%;
+    --success: 142 76% 55%;
     --success-foreground: 0 0% 100%;
+    --warning: 38 92% 58%;
+    --warning-foreground: 0 0% 100%;
+    --recipe: 271 91% 65%;
+    --recipe-foreground: 0 0% 100%;
 
     /* UI Elements */
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 220 13% 17%;
+    --input: 220 13% 15%;
+    --ring: 213 88% 60%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(214 32% 97%) 100%);
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(213 88% 60%) 0%, hsl(271 91% 65%) 50%, hsl(45 93% 65%) 100%);
+    --gradient-recipe: linear-gradient(145deg, hsl(220 13% 11%) 0%, hsl(220 13% 13%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(213 88% 60% / 0.1) 0%, hsl(271 91% 65% / 0.1) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(220 13% 9%) 0%, hsl(220 13% 11%) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(215 28% 17% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(215 28% 17% / 0.1), 0 2px 4px -1px hsl(215 28% 17% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(215 28% 17% / 0.1), 0 4px 6px -2px hsl(215 28% 17% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(215 28% 17% / 0.1), 0 10px 10px -5px hsl(215 28% 17% / 0.04);
-    --shadow-glow: 0 0 0 1px hsl(217 91% 60% / 0.05), 0 0 20px hsl(217 91% 60% / 0.1);
+    /* Premium Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 0 1px hsl(213 88% 60% / 0.2), 0 0 30px hsl(213 88% 60% / 0.3);
+    --shadow-recipe: 0 8px 32px hsl(213 88% 60% / 0.15);
 
     /* Spacing & Layout */
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -80,42 +87,34 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+  .light {
+    /* Light theme overrides for premium platform */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 9%;
+    --primary: 213 88% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 9% 95%;
+    --secondary-foreground: 220 13% 9%;
+    --muted: 220 9% 96%;
+    --muted-foreground: 220 9% 40%;
+    --accent: 45 93% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 88% 50%;
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 9% 98%) 100%);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 13% 9%;
+    --sidebar-primary: 213 88% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 9% 95%;
+    --sidebar-accent-foreground: 220 13% 9%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 213 88% 50%;
   }
 }
 
@@ -130,26 +129,38 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Custom Button Variants */
+  /* Premium Button Variants */
   .btn-hero {
-    @apply bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-glow;
   }
   
   .btn-secondary {
-    @apply bg-secondary hover:bg-muted text-secondary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 border border-border hover:border-primary/30;
+    @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 border border-border hover:border-primary/40;
   }
   
   .btn-accent {
-    @apply bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md;
   }
 
-  /* Card Variants */
+  .btn-recipe {
+    @apply bg-recipe hover:bg-recipe/90 text-recipe-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  /* Premium Card Variants */
   .card-feature {
-    @apply bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:border-primary/20 hover:-translate-y-1;
+    @apply bg-card border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-recipe hover:border-primary/30 hover:-translate-y-1 backdrop-blur-sm;
+  }
+  
+  .card-recipe {
+    @apply bg-gradient-recipe border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-recipe hover:border-accent/30 backdrop-blur-sm;
   }
   
   .card-workflow {
-    @apply bg-gradient-to-br from-card to-secondary/30 border border-border rounded-xl p-6 transition-all duration-500;
+    @apply bg-gradient-to-br from-card to-secondary/30 border border-border rounded-xl p-6 transition-all duration-500 backdrop-blur-sm;
+  }
+
+  .card-premium {
+    @apply bg-gradient-premium border border-primary/20 rounded-2xl p-8 relative overflow-hidden backdrop-blur-sm;
   }
 
   /* Animation Classes */
@@ -169,12 +180,32 @@ All colors MUST be HSL.
     animation: pulseSubtle 2s ease-in-out infinite;
   }
 
-  /* Gradient Text */
+  /* Premium Gradient Text */
   .text-gradient {
     background: var(--gradient-hero);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .text-recipe {
+    background: linear-gradient(135deg, hsl(var(--recipe)) 0%, hsl(var(--accent)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Recipe Status Indicators */
+  .status-active {
+    @apply bg-success/20 text-success border border-success/30 px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-monitored {
+    @apply bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-recipe {
+    @apply bg-recipe/20 text-recipe border border-recipe/30 px-3 py-1 rounded-full text-xs font-medium;
   }
 
   /* Before/After Workflow Animation */
@@ -206,6 +237,14 @@ All colors MUST be HSL.
   
   .bg-gradient-section {
     background: var(--gradient-section);
+  }
+  
+  .bg-gradient-recipe {
+    background: var(--gradient-recipe);
+  }
+  
+  .bg-gradient-premium {
+    background: var(--gradient-premium);
   }
 }
 
